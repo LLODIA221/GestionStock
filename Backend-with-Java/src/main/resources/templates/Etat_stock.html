@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>État des stocks</title>
+    <style>
+        body {
+            background-color: #F8F8FF;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ÉTAT DES STOCKS</h1>
+
+        <div class="table-responsive">
+            <table id="tableStock" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Code Produit</th>
+                        <th>Libellé</th>
+                        <th>Quantité</th>
+                        <th>Prix Unitaire</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PR001</td>
+                        <td>Produit 1</td>
+                        <td>100</td>
+                        <td>10€</td>
+                    </tr>
+                    <tr>
+                        <td>PR002</td>
+                        <td>Produit 2</td>
+                        <td>50</td>
+                        <td>15€</td>
+                    </tr>
+                    <tr>
+                        <td>PR003</td>
+                        <td>Produit 3</td>
+                        <td>20</td>
+                        <td>20€</td>
+                    </tr>
+                    <tr>
+                        <td>PR004</td>
+                        <td>Produit 4</td>
+                        <td>15</td>
+                        <td>25€</td>
+                    </tr>
+                    <tr>
+                        <td>PR005</td>
+                        <td>Produit 5</td>
+                        <td>10</td>
+                        <td>30€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#tableStock').DataTable({
+                "language": {
+                    "sProcessing":     "Traitement en cours...",
+                    "sSearch":         "Rechercher:",
+                    "sLengthMenu":   "Afficher _MENU_ entrées",
+                    "sInfo":           "Affichage de _START_ à _END_ sur _TOTAL_ entrées",
+                    "sInfoEmpty":    "Aucune entrée à afficher",
+                    "sInfoFiltered":  "(filtré à partir de _MAX_ entrées)",
+                    "sZeroRecords":   "Aucune entrée trouvée",
+                    "oPaginate": {
+                        "sFirst":    "Premier",
+                        "sPrevious": "Précédent",
+                        "sNext":     "Suivant",
+                        "sLast":    "Dernier"
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de distribution (ventes)</title>
+    <style>
+        body {
+            background-color: #F8F8FF;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FORMULAIRE DE DISTRIBUTION (VENTES)</h1>
+
+        <form action="#">
+            <table>
+                <tr>
+                    <th colspan="2">INFORMATION DES SORTIES</th>
+                </tr>
+                <tr>
+                    <th>N° FICHE</th>
+                    <td><input type="text" name="num_fiche" required th:field="*{num_fiche}"></td>
+                </tr>
+                <tr>
+                    <th>Beneficiaire</th>
+                    <td><input type="text" name="beneficiaire" required th:field="*{beneficiaire}"></td>
+                </tr>
+                <tr>
+                    <th>Telephone</th>
+                    <td><input type="text" name="telephone" required></td>
+                </tr>
+                <tr>
+                    <th>Adresse</th>
+                    <td><input type="text" name="adresse" required></td>
+                </tr>
+                <tr>
+                    <th colspan="2">PRODUITS</th>
+                </tr>
+                <tr>
+                    <th>Designation</th>
+                    <th>Quantite commande</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+          
+               
+            </table>
+
+            <div style="text-align: center;">
+                <button type="submit">Ajouter</button>
+                <button type="button">Imprimer</button>
+            </div>
+        </form>
+    </div

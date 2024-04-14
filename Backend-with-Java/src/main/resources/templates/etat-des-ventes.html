@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Clients</title>
+    <style>
+        body {
+            background-color: #F8F8FF;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ETAT DES VENTES</h1>
+
+        <div class="table-responsive">
+            <table id="tableVentes" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID </th>
+                        <th>Numero facture</th>
+                        <th>libelle</th>
+                        <th>Quantité</th>
+                        <th>Prix Unitaire</th>
+                        <th>Prix Total</th>
+                        <th>Date de Sortie</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>tomate </td>
+                        <td>10</td>
+                        <td>250</td>
+                        <td>2500</td>
+                        <td>31/12/2022</td>
+
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>tomate </td>
+                        <td>10</td>
+                        <td>250</td>
+                        <td>2500</td>
+                        <td>31/12/2022</td>
+
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>tomate </td>
+                        <td>10</td>
+                        <td>250</td>
+                        <td>2500</td>
+                        <td>31/12/2022</td>
+
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+
+  

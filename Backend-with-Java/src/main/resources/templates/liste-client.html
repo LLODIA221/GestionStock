@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Clients</title>
+    <style>
+        body {
+            background-color: #F8F8FF;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LISTE DES CLIENTS</h1>
+
+        <div class="table-responsive">
+            <table id="tableClients" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID Client</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Téléphone</th>
+                        <th>Adresse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Dupont</td>
+                        <td>Jean</td>
+                        <td>01 23 45 67 89</td>
+                        <td>12 Rue du Commerce, 75000 Paris</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Martin</td>
+                        <td>Pierre</td>
+                        <td>02 34 56 78 90</td>
+                        <td>5 Avenue Victor Hugo, 33000 Bordeaux</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Leroy</td>
+                        <td>Marie</td>
+                        <td>03 45 67 89 01</td>
+                        <td>4 Rue des Lilas, 69000 Lyon</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Dubois</td>
+                        <td>Thomas</td>
+                        <td>04 56 78 90 12</td>
+                        <td>8 Impasse des Roses, 13000 Marseille</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Bertrand</td>
+                        <td>Anne</td>
+                        <td>05 67 89 01 23</td>
+                        <td>32 Boulevard Voltaire, 06000 Nice</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+
+   

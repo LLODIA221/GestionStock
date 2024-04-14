@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page de Connexion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        h1{
+            margin-top: 10px;
+            margin-left: -80px;
+           text-align:top;
+           
+        }
+        form{
+            margin-top: 20px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 20px;
+            
+          
+           
+        
+
+        }
+        a{
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .form-control {
+            width: 300px; /* Set width to 150px */
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CHEZ NAEL</h1>
+
+        <form method="post" th:action="@{/login}" th:object="${loginForm}">
+            <div class="form-group">
+                <h2>Connectez-vous</h2>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" id="email" required th:field="*{email}" type="email"placeholder="Entrez votre nom d'utilisateur">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input class="form-control" id="password" required th:field="*{password}" type="password" placeholder="Entrez votre mot de passe">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+        </form>
+
+        <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+
+        <a href="" class="quit">Quitter</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

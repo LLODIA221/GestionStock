@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> </head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 bg-light sidebar">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">Tableau de bord</a>
+                    <a href="#" class="list-group-item list-group-item-action">Produits</a>
+                    <a href="#" class="list-group-item list-group-item-action">Clients</a>
+                    <a href="#" class="list-group-item list-group-item-action">Fournisseurs</a>
+                    <a href="#" class="list-group-item list-group-item-action">Commandes</a>
+                    <a href="#" class="list-group-item list-group-item-action">Statistiques</a>
+                    <a href="#" class="list-group-item list-group-item-action">Paramètres</a>
+                </div>
+            </div>
+
+            <main class="col-md-9 p-3">
+                <h1>Tableau de bord</h1>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">Produits en stock</div>
+                            <div class="card-body">
+                                <h5><span class="math-inline">\{\#model\.stockCount\} produits</h5\> <p class\="mb\-0"\>Voir le détail &rarr;</p\>
+</div\>
+</div\>
+</div\>
+<div class\="col\-md\-6"\>
+<div class\="card"\>
+<div class\="card\-header bg\-success text\-white"\>Commandes récentes</div\>
+<div class\="card\-body"\>
+<h5\></span>{#model.recentOrdersCount} commandes</h5> <p class="mb-0">Voir l'historique &rarr;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-warning text-white">Bénéfice du mois</div>
+                            <div class="card-body">
+                                <h5><span class="math-inline">\{\#model\.monthlyProfit\} €</h5\> <p class\="mb\-0"\>Voir le rapport &rarr;</p\>
+</div\>
+</div\>
+</div\>
+<div class\="col\-md\-6"\>
+<div class\="card"\>
+<div class\="card\-header bg\-danger text\-white"\>Stock faible</div\>
+<div class\="card\-body"\>
+<h5\></span>{#model.lowStockCount} produits</h5> <p class="mb-0">Voir la liste

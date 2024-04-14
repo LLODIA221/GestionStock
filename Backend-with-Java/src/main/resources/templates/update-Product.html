@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de modification</title>
+    <style>
+        body {
+            background-color: #F8F8FF;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FORMULAIRE MODIFICATION</h1>
+
+        <form action="#">
+            <table>
+                <tr>
+                    <th>Désignation</th>
+                    <th>Ancien Prix</th>
+                    <th>Nouveau Nom</th>
+                    <th>Nouveau Pu</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="designation" required></td>
+                    <td><input type="number" name="ancien_prix" required></td>
+                    <td><input type="text" name="nouveau_nom" required></td>
+                    <td><input type="number" name="nouveau_pu" required></td>
+                </tr>
+            </table>
+
+            <div style="text-align: center;">
+                <button type="submit">Modifier PU</button>
+                <button type="button">Modifier Nom</button>
+                <button type="button">Supprimer</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
